@@ -1,0 +1,397 @@
++ [[ linux-gnu == \l\i\n\u\x\-\g\n\u* ]]
++ ABSOLUTE_PATH=/root
++ echo 'OSTYPE: linux-gnu'
+OSTYPE: linux-gnu
++ pip install soundfile torchaudio==0.6.0
+Requirement already satisfied: soundfile in /usr/local/lib/python3.8/dist-packages (0.10.2)
+Requirement already satisfied: torchaudio==0.6.0 in /usr/local/lib/python3.8/dist-packages (0.6.0)
+Requirement already satisfied: torch==1.6.0 in /usr/local/lib/python3.8/dist-packages (from torchaudio==0.6.0) (1.6.0+cpu)
+Requirement already satisfied: future in /usr/local/lib/python3.8/dist-packages (from torch==1.6.0->torchaudio==0.6.0) (1.0.0)
+Requirement already satisfied: numpy in /usr/local/lib/python3.8/dist-packages (from torch==1.6.0->torchaudio==0.6.0) (1.19.5)
+Requirement already satisfied: cffi>=1.0 in /usr/local/lib/python3.8/dist-packages (from soundfile) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi>=1.0->soundfile) (2.22)
+DEPRECATION: omegaconf 2.0.6 has a non-standard dependency specifier PyYAML>=5.1.*. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of omegaconf or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 25.0.1
+[notice] To update, run: python3 -m pip install --upgrade pip
++ conda install -y -c conda-forge librosa
+asr-install.sh: line 25: conda: command not found
++ pip install pydub editdistance==0.5.3 SoundFile==0.10.2 numba==0.48
+Requirement already satisfied: pydub in /usr/local/lib/python3.8/dist-packages (0.25.1)
+Requirement already satisfied: editdistance==0.5.3 in /usr/local/lib/python3.8/dist-packages (0.5.3)
+Requirement already satisfied: SoundFile==0.10.2 in /usr/local/lib/python3.8/dist-packages (0.10.2)
+Requirement already satisfied: numba==0.48 in /usr/local/lib/python3.8/dist-packages (0.48.0)
+Requirement already satisfied: cffi>=1.0 in /usr/local/lib/python3.8/dist-packages (from SoundFile==0.10.2) (1.15.1)
+Requirement already satisfied: llvmlite<0.32.0,>=0.31.0dev0 in /usr/local/lib/python3.8/dist-packages (from numba==0.48) (0.31.0)
+Requirement already satisfied: numpy>=1.15 in /usr/local/lib/python3.8/dist-packages (from numba==0.48) (1.19.5)
+Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from numba==0.48) (75.3.2)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi>=1.0->SoundFile==0.10.2) (2.22)
+DEPRECATION: omegaconf 2.0.6 has a non-standard dependency specifier PyYAML>=5.1.*. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of omegaconf or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 24.0 -> 25.0.1
+[notice] To update, run: python3 -m pip install --upgrade pip
++ apt-get update -y
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Reading package lists...
++ apt-get upgrade -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ apt-get install -y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ apt-get -y install apt-utils gcc libpq-dev libsndfile-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+gcc is already the newest version (4:9.3.0-1ubuntu2).
+apt-utils is already the newest version (2.0.11).
+libpq-dev is already the newest version (12.22-0ubuntu0.20.04.4).
+libsndfile1-dev is already the newest version (1.0.28-7ubuntu0.3).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ apt-get install -y build-essential cmake libatlas-base-dev libfftw3-dev liblzma-dev libbz2-dev libzstd-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libbz2-dev is already the newest version (1.0.8-2).
+libfftw3-dev is already the newest version (3.3.8-2ubuntu1).
+libatlas-base-dev is already the newest version (3.10.3-8ubuntu7).
+build-essential is already the newest version (12.8ubuntu1.1).
+cmake is already the newest version (3.16.3-1ubuntu1.20.04.1).
+liblzma-dev is already the newest version (5.2.4-1ubuntu1.1).
+libzstd-dev is already the newest version (1.4.4+dfsg-3ubuntu0.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ cd /root
++ apt install -y build-essential cmake libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev libeigen3-dev zlib1g-dev libbz2-dev liblzma-dev
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libboost-program-options-dev is already the newest version (1.71.0.0ubuntu2).
+libboost-system-dev is already the newest version (1.71.0.0ubuntu2).
+libboost-thread-dev is already the newest version (1.71.0.0ubuntu2).
+libbz2-dev is already the newest version (1.0.8-2).
+libboost-test-dev is already the newest version (1.71.0.0ubuntu2).
+libeigen3-dev is already the newest version (3.3.7-2).
+build-essential is already the newest version (12.8ubuntu1.1).
+cmake is already the newest version (3.16.3-1ubuntu1.20.04.1).
+liblzma-dev is already the newest version (5.2.4-1ubuntu1.1).
+zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu1.5).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ git clone https://github.com/kpu/kenlm.git
+fatal: destination path 'kenlm' already exists and is not an empty directory.
++ cd kenlm
++ mkdir -p build
++ cd build
++ cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+-- Found OpenMP_C: -fopenmp  
+-- Found OpenMP_CXX: -fopenmp  
+-- Found OpenMP: TRUE   
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/kenlm/build
++ make -j 16
+[  1%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/bignum.cc.o
+[  2%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/strtod.cc.o
+[  3%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/io.cc.o
+[  4%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/string-to-double.cc.o
+[  5%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/cached-powers.cc.o
+[  6%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/fast-dtoa.cc.o
+[  8%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/double-to-string.cc.o
+[  7%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/count_records.cc.o
+[  9%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/fixed-dtoa.cc.o
+[ 10%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/rewindable_stream.cc.o
+[ 13%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/line_input.cc.o
+[ 13%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/multi_progress.cc.o
+[ 14%] Building CXX object util/CMakeFiles/kenlm_util.dir/double-conversion/bignum-dtoa.cc.o
+[ 15%] Building CXX object util/CMakeFiles/kenlm_util.dir/bit_packing.cc.o
+[ 15%] Building CXX object util/CMakeFiles/kenlm_util.dir/ersatz_progress.cc.o
+[ 16%] Building CXX object util/CMakeFiles/kenlm_util.dir/stream/chain.cc.o
+[ 17%] Building CXX object util/CMakeFiles/kenlm_util.dir/file.cc.o
+[ 18%] Building CXX object util/CMakeFiles/kenlm_util.dir/exception.cc.o
+[ 19%] Building CXX object util/CMakeFiles/kenlm_util.dir/file_piece.cc.o
+[ 20%] Building CXX object util/CMakeFiles/kenlm_util.dir/float_to_string.cc.o
+[ 21%] Building CXX object util/CMakeFiles/kenlm_util.dir/integer_to_string.cc.o
+[ 22%] Building CXX object util/CMakeFiles/kenlm_util.dir/mmap.cc.o
+[ 23%] Building CXX object util/CMakeFiles/kenlm_util.dir/parallel_read.cc.o
+[ 25%] Building CXX object util/CMakeFiles/kenlm_util.dir/murmur_hash.cc.o
+[ 26%] Building CXX object util/CMakeFiles/kenlm_util.dir/pool.cc.o
+[ 27%] Building CXX object util/CMakeFiles/kenlm_util.dir/read_compressed.cc.o
+[ 28%] Building CXX object util/CMakeFiles/kenlm_util.dir/string_piece.cc.o
+[ 29%] Building CXX object util/CMakeFiles/kenlm_util.dir/spaces.cc.o
+[ 30%] Building CXX object util/CMakeFiles/kenlm_util.dir/scoped.cc.o
+[ 31%] Building CXX object util/CMakeFiles/kenlm_util.dir/usage.cc.o
+[ 32%] Linking CXX static library ../lib/libkenlm_util.a
+[ 32%] Built target kenlm_util
+[ 33%] Building CXX object lm/filter/CMakeFiles/kenlm_filter.dir/arpa_io.cc.o
+[ 34%] Building CXX object util/CMakeFiles/probing_hash_table_benchmark.dir/probing_hash_table_benchmark_main.cc.o
+[ 35%] Building CXX object lm/CMakeFiles/kenlm.dir/bhiksha.cc.o
+[ 36%] Building CXX object lm/CMakeFiles/kenlm.dir/binary_format.cc.o
+[ 37%] Building CXX object lm/CMakeFiles/kenlm.dir/config.cc.o
+[ 38%] Building CXX object lm/CMakeFiles/kenlm.dir/search_trie.cc.o
+[ 40%] Building CXX object lm/filter/CMakeFiles/kenlm_filter.dir/vocab.cc.o
+[ 40%] Building CXX object lm/filter/CMakeFiles/kenlm_filter.dir/phrase.cc.o
+[ 41%] Building CXX object lm/CMakeFiles/kenlm.dir/read_arpa.cc.o
+[ 42%] Building CXX object lm/CMakeFiles/kenlm.dir/quantize.cc.o
+[ 43%] Building CXX object lm/CMakeFiles/kenlm.dir/lm_exception.cc.o
+[ 44%] Building CXX object lm/CMakeFiles/kenlm.dir/sizes.cc.o
+[ 45%] Building CXX object lm/CMakeFiles/kenlm.dir/search_hashed.cc.o
+[ 46%] Building CXX object lm/CMakeFiles/kenlm.dir/trie_sort.cc.o
+[ 47%] Building CXX object lm/CMakeFiles/kenlm.dir/model.cc.o
+[ 48%] Building CXX object lm/CMakeFiles/kenlm.dir/trie.cc.o
+[ 50%] Building CXX object lm/CMakeFiles/kenlm.dir/value_build.cc.o
+[ 51%] Building CXX object lm/CMakeFiles/kenlm.dir/virtual_interface.cc.o
+[ 52%] Building CXX object lm/CMakeFiles/kenlm.dir/common/model_buffer.cc.o
+[ 53%] Building CXX object lm/CMakeFiles/kenlm.dir/vocab.cc.o
+[ 54%] Building CXX object lm/CMakeFiles/kenlm.dir/common/print.cc.o
+[ 55%] Building CXX object lm/CMakeFiles/kenlm.dir/common/renumber.cc.o
+[ 56%] Building CXX object lm/CMakeFiles/kenlm.dir/common/size_option.cc.o
+[ 57%] Linking CXX static library ../../lib/libkenlm_filter.a
+[ 57%] Built target kenlm_filter
+[ 58%] Linking CXX static library ../lib/libkenlm.a
+[ 58%] Built target kenlm
+[ 59%] Building CXX object lm/CMakeFiles/kenlm_benchmark.dir/kenlm_benchmark_main.cc.o
+[ 60%] Building CXX object lm/CMakeFiles/fragment.dir/fragment_main.cc.o
+[ 61%] Building CXX object lm/filter/CMakeFiles/filter.dir/filter_main.cc.o
+[ 62%] Building CXX object lm/CMakeFiles/query.dir/query_main.cc.o
+[ 63%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/initial_probabilities.cc.o
+[ 64%] Building CXX object lm/filter/CMakeFiles/phrase_table_vocab.dir/phrase_table_vocab_main.cc.o
+[ 65%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/merge_probabilities.cc.o
+[ 66%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/merge_vocab.cc.o
+[ 67%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/interpolate.cc.o
+[ 68%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/corpus_count.cc.o
+[ 69%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/output.cc.o
+[ 70%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/bounded_sequence_encoding.cc.o
+[ 72%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/adjust_counts.cc.o
+[ 72%] Building CXX object lm/CMakeFiles/build_binary.dir/build_binary_main.cc.o
+[ 73%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/backoff_reunification.cc.o
+[ 75%] Linking CXX executable ../bin/probing_hash_table_benchmark
+[ 76%] Building CXX object lm/builder/CMakeFiles/kenlm_builder.dir/pipeline.cc.o
+[ 76%] Built target probing_hash_table_benchmark
+[ 77%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/normalize.cc.o
+[ 78%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/pipeline.cc.o
+[ 79%] Linking CXX executable ../bin/build_binary
+[ 80%] Linking CXX executable ../bin/fragment
+[ 80%] Built target build_binary
+[ 81%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/split_worker.cc.o
+[ 81%] Built target fragment
+[ 82%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/tune_derivatives.cc.o
+[ 83%] Linking CXX executable ../bin/query
+[ 83%] Built target query
+[ 84%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/tune_instances.cc.o
+[ 85%] Linking CXX executable ../../bin/phrase_table_vocab
+[ 86%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/tune_weights.cc.o
+[ 87%] Building CXX object lm/interpolate/CMakeFiles/kenlm_interpolate.dir/universal_vocab.cc.o
+[ 87%] Built target phrase_table_vocab
+[ 88%] Linking CXX static library ../../lib/libkenlm_builder.a
+[ 88%] Built target kenlm_builder
+[ 90%] Building CXX object lm/builder/CMakeFiles/count_ngrams.dir/count_ngrams_main.cc.o
+[ 90%] Building CXX object lm/builder/CMakeFiles/lmplz.dir/lmplz_main.cc.o
+[ 91%] Linking CXX static library ../../lib/libkenlm_interpolate.a
+[ 91%] Built target kenlm_interpolate
+[ 92%] Building CXX object lm/interpolate/CMakeFiles/streaming_example.dir/streaming_example_main.cc.o
+[ 93%] Building CXX object lm/interpolate/CMakeFiles/interpolate.dir/interpolate_main.cc.o
+[ 94%] Linking CXX executable ../../bin/filter
+[ 94%] Built target filter
+[ 95%] Linking CXX executable ../bin/kenlm_benchmark
+[ 95%] Built target kenlm_benchmark
+[ 96%] Linking CXX executable ../../bin/lmplz
+[ 96%] Built target lmplz
+[ 97%] Linking CXX executable ../../bin/interpolate
+[ 97%] Built target interpolate
+[ 98%] Linking CXX executable ../../bin/streaming_example
+[ 98%] Built target streaming_example
+[100%] Linking CXX executable ../../bin/count_ngrams
+[100%] Built target count_ngrams
++ export KENLM_ROOT_DIR=/root/kenlm/
++ KENLM_ROOT_DIR=/root/kenlm/
++ cd ../..
++ apt-get install -y libsndfile1-dev libopenblas-dev libfftw3-dev libgflags-dev libgoogle-glog-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libfftw3-dev is already the newest version (3.3.8-2ubuntu1).
+libgflags-dev is already the newest version (2.2.2-1build1).
+libgoogle-glog-dev is already the newest version (0.4.0-1build1).
+libsndfile1-dev is already the newest version (1.0.28-7ubuntu0.3).
+libopenblas-dev is already the newest version (0.3.8+ds-1ubuntu0.20.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++ git clone -b v0.2 https://github.com/facebookresearch/wav2letter.git
+fatal: destination path 'wav2letter' already exists and is not an empty directory.
++ cd wav2letter/bindings/python
++ pip install -e .
+Obtaining file:///root/wav2letter/bindings/python
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+DEPRECATION: omegaconf 2.0.6 has a non-standard dependency specifier PyYAML>=5.1.*. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of omegaconf or contact the author to suggest that they release a version with a conforming dependency specifiers. Discussion can be found at https://github.com/pypa/pip/issues/12063
+Installing collected packages: wav2letter
+  Running setup.py develop for wav2letter
+    error: subprocess-exited-with-error
+    
+    × python setup.py develop did not run successfully.
+    │ exit code: 1
+    ╰─> [69 lines of output]
+        running develop
+        running egg_info
+        writing wav2letter.egg-info/PKG-INFO
+        writing dependency_links to wav2letter.egg-info/dependency_links.txt
+        writing top-level names to wav2letter.egg-info/top_level.txt
+        reading manifest file 'wav2letter.egg-info/SOURCES.txt'
+        writing manifest file 'wav2letter.egg-info/SOURCES.txt'
+        running build_ext
+        make: *** No targets specified and no makefile found.  Stop.
+        /usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` and ``easy_install``.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://github.com/pypa/setuptools/issues/917 for details.
+                ********************************************************************************
+        
+        !!
+          easy_install.initialize_options(self)
+        /usr/local/lib/python3.8/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+        !!
+        
+                ********************************************************************************
+                Please avoid running ``setup.py`` directly.
+                Instead, use pypa/build, pypa/installer or other
+                standards-based tools.
+        
+                See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+                ********************************************************************************
+        
+        !!
+          self.initialize_options()
+        Traceback (most recent call last):
+          File "<string>", line 2, in <module>
+          File "<pip-setuptools-caller>", line 34, in <module>
+          File "/root/wav2letter/bindings/python/setup.py", line 95, in <module>
+            setup(
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/__init__.py", line 117, in setup
+            return distutils.core.setup(**attrs)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/core.py", line 183, in setup
+            return run_commands(dist)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/core.py", line 199, in run_commands
+            dist.run_commands()
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+            self.run_command(cmd)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 973, in run_command
+            cmd_obj.run()
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py", line 35, in run
+            self.install_for_development()
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py", line 112, in install_for_development
+            self.run_command('build_ext')
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+            self.distribution.run_command(command)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/dist.py", line 999, in run_command
+            super().run_command(command)
+          File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 973, in run_command
+            cmd_obj.run()
+          File "/root/wav2letter/bindings/python/setup.py", line 48, in run
+            self.build_extensions()
+          File "/root/wav2letter/bindings/python/setup.py", line 90, in build_extensions
+            subprocess.check_call(
+          File "/usr/lib/python3.8/subprocess.py", line 364, in check_call
+            raise CalledProcessError(retcode, cmd)
+        subprocess.CalledProcessError: Command '['cmake', '--build', '.', '--config', 'Release', '--', '-j4']' returned non-zero exit status 2.
+        [end of output]
+    
+    note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× python setup.py develop did not run successfully.
+│ exit code: 1
+╰─> [69 lines of output]
+    running develop
+    running egg_info
+    writing wav2letter.egg-info/PKG-INFO
+    writing dependency_links to wav2letter.egg-info/dependency_links.txt
+    writing top-level names to wav2letter.egg-info/top_level.txt
+    reading manifest file 'wav2letter.egg-info/SOURCES.txt'
+    writing manifest file 'wav2letter.egg-info/SOURCES.txt'
+    running build_ext
+    make: *** No targets specified and no makefile found.  Stop.
+    /usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` and ``easy_install``.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://github.com/pypa/setuptools/issues/917 for details.
+            ********************************************************************************
+    
+    !!
+      easy_install.initialize_options(self)
+    /usr/local/lib/python3.8/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+    !!
+    
+            ********************************************************************************
+            Please avoid running ``setup.py`` directly.
+            Instead, use pypa/build, pypa/installer or other
+            standards-based tools.
+    
+            See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+            ********************************************************************************
+    
+    !!
+      self.initialize_options()
+    Traceback (most recent call last):
+      File "<string>", line 2, in <module>
+      File "<pip-setuptools-caller>", line 34, in <module>
+      File "/root/wav2letter/bindings/python/setup.py", line 95, in <module>
+        setup(
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/__init__.py", line 117, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/core.py", line 183, in setup
+        return run_commands(dist)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/core.py", line 199, in run_commands
+        dist.run_commands()
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 954, in run_commands
+        self.run_command(cmd)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 973, in run_command
+        cmd_obj.run()
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py", line 35, in run
+        self.install_for_development()
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/command/develop.py", line 112, in install_for_development
+        self.run_command('build_ext')
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/cmd.py", line 316, in run_command
+        self.distribution.run_command(command)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/dist.py", line 999, in run_command
+        super().run_command(command)
+      File "/usr/local/lib/python3.8/dist-packages/setuptools/_distutils/dist.py", line 973, in run_command
+        cmd_obj.run()
+      File "/root/wav2letter/bindings/python/setup.py", line 48, in run
+        self.build_extensions()
+      File "/root/wav2letter/bindings/python/setup.py", line 90, in build_extensions
+        subprocess.check_call(
+      File "/usr/lib/python3.8/subprocess.py", line 364, in check_call
+        raise CalledProcessError(retcode, cmd)
+    subprocess.CalledProcessError: Command '['cmake', '--build', '.', '--config', 'Release', '--', '-j4']' returned non-zero exit status 2.
+    [end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 24.0 -> 25.0.1
+[notice] To update, run: python3 -m pip install --upgrade pip
++ cd ../../..

@@ -1,0 +1,26 @@
+# Dataset files
+data/
+datasets/
+*.zip
+*.tar.gz
+*.csv
+*.h5
+*.pt
+*.pth
+
+# Checkpoints or large results
+checkpoints/
+results/*.npy
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Model files
+model/
+models/
+*.onnx
+*.pb
+*.tflite
+*.ckpt
+*.model
