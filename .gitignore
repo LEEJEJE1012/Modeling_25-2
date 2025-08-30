@@ -10,7 +10,6 @@ datasets/
 
 # Checkpoints or large results
 checkpoints/
-results/*.npy
 
 # System files
 .DS_Store
